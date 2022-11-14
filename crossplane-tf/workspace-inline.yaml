@@ -13,13 +13,13 @@ spec:
     # main.tf as opaque, inline HCL.
     source: Inline
     module: |
-      # // Outputs are written to the connection secret.
-      # output "url" {
-      #   value       = random_id.example.byte_length
-      # }
-      # resource "random_id" "example" {
-      #   byte_length = 4
-      # }
+      // Outputs are written to the connection secret.
+      output "url" {
+        value       = random_id.example.byte_length
+      }
+      resource "random_id" "example" {
+        byte_length = 4
+      }
 
       # // Outputs are written to the connection secret.
       # output "image-name" {
