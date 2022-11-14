@@ -5,7 +5,8 @@ metadata:
   name: terraform-config
   labels:
     app: crossplane-provider-terraform
-  argocd.argoproj.io/sync-wave: "1"
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   image: crossplane/provider-terraform-controller:v0.2.0
   args: ["-d"]
