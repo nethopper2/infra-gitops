@@ -15,7 +15,7 @@ spec:
     # You can also specify a simple main.tf inline; see
     # workspace-inline.yaml.
     source: Remote
-    module: git::https://github.com/nethopper2/infra-gitops/crossplane-tf/tf?ref=main
+    module: git::https://github.com/nethopper2/infra-gitops/crossplane-tf/tf
     # Variables can be specified inline.
     # vars:
     # - key: region
