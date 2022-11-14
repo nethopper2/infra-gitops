@@ -16,7 +16,7 @@ kind: Provider
 metadata:
   name: crossplane-provider-terraform
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   package: crossplane/provider-terraform:v0.2.0
   controllerConfigRef:
