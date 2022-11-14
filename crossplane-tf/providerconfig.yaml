@@ -2,6 +2,7 @@ apiVersion: tf.crossplane.io/v1alpha1
 kind: ProviderConfig
 metadata:
   name: default
+  argocd.argoproj.io/sync-wave: "3"
 spec:
   # Note that unlike most provider configs this one supports an array of
   # credentials. This is because each Terraform workspace uses a single

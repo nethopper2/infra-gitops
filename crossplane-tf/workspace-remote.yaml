@@ -2,6 +2,7 @@ apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
   name: example-remote
+  argocd.argoproj.io/sync-wave: "4"
   annotations:
     # The terraform workspace will be named 'myworkspace'. If you omit this
     # annotation it would be derived from metadata.name - e.g. 'example-remote'.
