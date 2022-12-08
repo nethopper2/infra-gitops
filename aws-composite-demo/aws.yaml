@@ -5,8 +5,6 @@ metadata:
   labels:
     provider: aws
     cluster: eks
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   compositeTypeRef:
     apiVersion: devopstoolkitseries.com/v1alpha1
