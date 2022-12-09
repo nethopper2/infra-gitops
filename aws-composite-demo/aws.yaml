@@ -229,12 +229,6 @@ spec:
           region: us-east-2
           vpcIdSelector:
             matchControllerRef: true
-          egress:
-          - fromPort: 0
-            toPort: 0
-            ipProtocol: "-1"
-            ipRanges:
-            - cidrIp: "0.0.0.0/0"
   - name: subnet-nodepool-1a
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
