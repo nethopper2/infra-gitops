@@ -31,6 +31,8 @@ spec:
             endpointPublicAccess: true
             subnetIdSelector:
               matchControllerRef: true
+        providerConfigRef:
+          name: awsconfig
     patches:
     - fromFieldPath: metadata.annotations[crossplane.io/external-name]
       toFieldPath: metadata.annotations[crossplane.io/external-name]
@@ -78,6 +80,8 @@ spec:
             desiredSize: 1
           instanceTypes:
             - t3.small
+        providerConfigRef:
+          name: awsconfig
     patches:
     - fromFieldPath: spec.parameters.nodeSize
       toFieldPath: spec.forProvider.instanceTypes[0]
@@ -124,6 +128,8 @@ spec:
                   }
               ]
             }
+        providerConfigRef:
+          name: awsconfig
   - name: iamrole-nodegroup
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -150,6 +156,8 @@ spec:
                   }
               ]
             }
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-controlplane
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -161,6 +169,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: controlplane
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-service
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -172,6 +182,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: controlplane
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-worker
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -183,6 +195,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: nodegroup
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-cni
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -194,6 +208,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: nodegroup
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-registry
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -205,6 +221,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: nodegroup
+        providerConfigRef:
+          name: awsconfig
   - name: vpc-nodepool
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -218,6 +236,8 @@ spec:
             value: devops-catalog
           - key: kubernetes.io/cluster/devops-catalog
             value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: sc-nodepool
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -229,6 +249,8 @@ spec:
           region: us-east-2
           vpcIdSelector:
             matchControllerRef: true
+        providerConfigRef:
+          name: awsconfig
   - name: subnet-nodepool-1a
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -250,6 +272,8 @@ spec:
               value: devops-catalog
             - key: kubernetes.io/cluster/devops-catalog
               value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: subnet-nodepool-1b
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -271,6 +295,8 @@ spec:
               value: devops-catalog
             - key: kubernetes.io/cluster/devops-catalog
               value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: subnet-nodepool-1c
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -292,6 +318,8 @@ spec:
               value: devops-catalog
             - key: kubernetes.io/cluster/devops-catalog
               value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: gateway
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -301,6 +329,8 @@ spec:
           region: us-east-2
           vpcIdSelector:
             matchControllerRef: true
+        providerConfigRef:
+          name: awsconfig
   - name: routetable
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -330,3 +360,5 @@ spec:
                 matchLabels:
                   zone: us-east-2c
                   access: public
+        providerConfigRef:
+          name: awsconfig
