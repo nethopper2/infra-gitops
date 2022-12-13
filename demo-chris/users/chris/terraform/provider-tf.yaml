@@ -1,0 +1,7 @@
+apiVersion: pkg.crossplane.io/v1
+kind: Provider
+metadata:
+  name: terraform-provider
+  namespace: nethopper
+spec:
+  package: crossplane/provider-terraform:master
