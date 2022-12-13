@@ -55,3 +55,7 @@ Step7: Delete vpc
 k delete -f workspace-remote.yaml
 NOTE: This command will take some time, because it is waiting for AWS to confirm vpc delete, on a crossplane sync cycle.  Check your AWS console.
 
+Step8: If you just created a kubernetes cluster, you can access it with (note, this requires the AWS cli):
+aws eks --region <region> update-kubeconfig --name <cluster-name>
+kubectl config get-contexts
+
