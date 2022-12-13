@@ -1,8 +1,10 @@
 ### To add infra using Crossplane Terraform proivder to 3.7.1, do the following.
+cd demo-chris/users/chris/terraform/
 
 Step1: apply crossplane terraform provider
-k apply -f provider-tf.txt
-#NOTE: Wait for provider to be ready.  k get provider
+k apply -f provider-tf.yaml
+k get provider
+#NOTE: Wait for terraform-provider to be HEALTHY=True.
 
 Step2: Apply the needed secrets
 echo '
@@ -36,8 +38,20 @@ rm secrets.yaml
 #NOTE: never save creds to git
 
 Step3: apply crossplane terraform provider config
-k apply -f providerconfig.txt
+k apply -f providerconfig.yaml
+k get providerconfig.
+NOTE: no need to wait for anything
 
-Step4:
+Step4: apply terraform workspace (remote type)
+k apply -f workspace-remote.yaml 
+k get workspace
+NOTE: Wait for workspace to be synced and ready
 
+Step5: Check AWS console us-west-2 for a new vpc
+
+Step6: Modify TF files in terraform/vpc-aws and commit/push.  Then wait for AWS console to update
+
+Step7: Delete vpc
+k delete -f workspace-remote.yaml
+NOTE: This command will take some time, because it is waiting for AWS to confirm vpc delete, on a crossplane sync cycle.  Check your AWS console.
 
