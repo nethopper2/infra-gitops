@@ -5,8 +5,6 @@ metadata:
   labels:
     provider: aws
     cluster: eks
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
 spec:
   compositeTypeRef:
     apiVersion: devopstoolkitseries.com/v1alpha1
@@ -22,7 +20,7 @@ spec:
       kind: Cluster
       spec:
         forProvider:
-          region: us-east-1
+          region: us-east-2
           version: "1.20"
           roleArnSelector:
             matchControllerRef: true
@@ -33,6 +31,8 @@ spec:
             endpointPublicAccess: true
             subnetIdSelector:
               matchControllerRef: true
+        providerConfigRef:
+          name: awsconfig
     patches:
     - fromFieldPath: metadata.annotations[crossplane.io/external-name]
       toFieldPath: metadata.annotations[crossplane.io/external-name]
@@ -64,7 +64,7 @@ spec:
       kind: NodeGroup
       spec:
         forProvider:
-          region: us-east-1
+          region: us-east-2
           clusterNameSelector:
             matchControllerRef: true
           nodeRoleSelector:
@@ -80,6 +80,8 @@ spec:
             desiredSize: 1
           instanceTypes:
             - t3.small
+        providerConfigRef:
+          name: awsconfig
     patches:
     - fromFieldPath: spec.parameters.nodeSize
       toFieldPath: spec.forProvider.instanceTypes[0]
@@ -126,6 +128,8 @@ spec:
                   }
               ]
             }
+        providerConfigRef:
+          name: awsconfig
   - name: iamrole-nodegroup
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -152,6 +156,8 @@ spec:
                   }
               ]
             }
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-controlplane
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -163,6 +169,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: controlplane
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-service
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -174,6 +182,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: controlplane
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-worker
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -185,6 +195,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: nodegroup
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-cni
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -196,6 +208,8 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: nodegroup
+        providerConfigRef:
+          name: awsconfig
   - name: iamattachment-registry
     base:
       apiVersion: identity.aws.crossplane.io/v1beta1
@@ -207,19 +221,23 @@ spec:
             matchControllerRef: true
             matchLabels:
               role: nodegroup
+        providerConfigRef:
+          name: awsconfig
   - name: vpc-nodepool
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
       kind: VPC
       spec:
         forProvider:
-          region: us-east-1
+          region: us-east-2
           cidrBlock: 10.0.0.0/16
           tags:
           - key: Name
             value: devops-catalog
           - key: kubernetes.io/cluster/devops-catalog
             value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: sc-nodepool
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -228,27 +246,23 @@ spec:
         forProvider:
           description: Cluster communication with worker nodes
           groupName: devops-catalog
-          region: us-east-1
+          region: us-east-2
           vpcIdSelector:
             matchControllerRef: true
-          egress:
-          - fromPort: 0
-            toPort: 0
-            ipProtocol: "-1"
-            ipRanges:
-            - cidrIp: "0.0.0.0/0"
+        providerConfigRef:
+          name: awsconfig
   - name: subnet-nodepool-1a
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
       kind: Subnet
       metadata:
         labels:
-          zone: us-east-1a
+          zone: us-east-2a
           access: public
       spec:
         forProvider:
-          region: us-east-1
-          availabilityZone: us-east-1a
+          region: us-east-2
+          availabilityZone: us-east-2a
           cidrBlock: 10.0.0.0/24
           vpcIdSelector:
             matchControllerRef: true
@@ -258,18 +272,20 @@ spec:
               value: devops-catalog
             - key: kubernetes.io/cluster/devops-catalog
               value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: subnet-nodepool-1b
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
       kind: Subnet
       metadata:
         labels:
-          zone: us-east-1b
+          zone: us-east-2b
           access: public
       spec:
         forProvider:
-          region: us-east-1
-          availabilityZone: us-east-1b
+          region: us-east-2
+          availabilityZone: us-east-2b
           cidrBlock: 10.0.1.0/24
           vpcIdSelector:
             matchControllerRef: true
@@ -279,18 +295,20 @@ spec:
               value: devops-catalog
             - key: kubernetes.io/cluster/devops-catalog
               value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: subnet-nodepool-1c
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
       kind: Subnet
       metadata:
         labels:
-          zone: us-east-1c
+          zone: us-east-2c
           access: public
       spec:
         forProvider:
-          region: us-east-1
-          availabilityZone: us-east-1c
+          region: us-east-2
+          availabilityZone: us-east-2c
           cidrBlock: 10.0.2.0/24
           vpcIdSelector:
             matchControllerRef: true
@@ -300,22 +318,26 @@ spec:
               value: devops-catalog
             - key: kubernetes.io/cluster/devops-catalog
               value: shared
+        providerConfigRef:
+          name: awsconfig
   - name: gateway
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
       kind: InternetGateway
       spec:
         forProvider:
-          region: us-east-1
+          region: us-east-2
           vpcIdSelector:
             matchControllerRef: true
+        providerConfigRef:
+          name: awsconfig
   - name: routetable
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
       kind: RouteTable
       spec:
         forProvider:
-          region: us-east-1
+          region: us-east-2
           vpcIdSelector:
             matchControllerRef: true
           routes:
@@ -326,15 +348,17 @@ spec:
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
-                  zone: us-east-1a
+                  zone: us-east-2a
                   access: public
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
-                  zone: us-east-1b
+                  zone: us-east-2b
                   access: public
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
-                  zone: us-east-1c
+                  zone: us-east-2c
                   access: public
+        providerConfigRef:
+          name: awsconfig
