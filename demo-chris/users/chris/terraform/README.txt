@@ -51,11 +51,17 @@ Step5: Check AWS console us-west-2 for a new vpc
 
 Step6: Modify TF files in terraform/vpc-aws and commit/push.  Then wait for AWS console to update
 
-Step7: Delete vpc
-k delete -f workspace-remote.yaml
-NOTE: This command will take some time, because it is waiting for AWS to confirm vpc delete, on a crossplane sync cycle.  Check your AWS console.
-
-Step8: If you just created a kubernetes cluster, you can access it with (note, this requires the AWS cli):
+Step7: If you just created a kubernetes cluster, you can access it with (note, this requires the AWS cli):
 aws eks --region <region> update-kubeconfig --name <cluster-name>
 kubectl config get-contexts
 
+
+Step8: Delete terraform stuff defined in the workspace directory and the namespaces it was created in
+k delete -f workspace-remote.yaml
+k delete ns test123
+NOTE: This command will take some time, because it is waiting for AWS to confirm vpc delete, on a crossplane sync cycle.  Check your AWS console.
+
+Step9: delete provider, providerconfig, secrets and namespaces
+k delete providerconfig tf-pc
+k delete provider terraform-provider
+k delete secrets aws-creds git-credentials -n nethopper
