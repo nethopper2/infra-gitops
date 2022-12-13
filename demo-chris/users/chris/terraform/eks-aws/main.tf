@@ -8,10 +8,6 @@ provider "kubernetes" {
   cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
 }
 
-provider "aws" {
-  region = var.region
-}
-
 data "aws_availability_zones" "available" {}
 
 locals {
