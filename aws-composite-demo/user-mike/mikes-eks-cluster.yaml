@@ -14,5 +14,5 @@ spec:
     # version: "1.20"
     # minNodeCount: 2
   writeConnectionSecretToRef:
-    namespace: iacode
+    namespace: test123
     name: cluster
