@@ -1,7 +1,7 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: VPC
 metadata:
-  name: production-vpc
+  name: mike-vpc
 spec:
   forProvider:
     region: us-east-2
@@ -12,7 +12,7 @@ spec:
     - key: Environment
       value: Dev
     - key: Owner
-      value: Chris
+      value: Mike
     - key: Name
       value: production-vpc
     instanceTenancy: default
