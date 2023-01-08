@@ -14,7 +14,7 @@ spec:
     - key: Owner
       value: Mike
     - key: Name
-      value: production-vpc
+      value: mike-vpc
     instanceTenancy: default
   providerConfigRef:
     name: awsconfig
