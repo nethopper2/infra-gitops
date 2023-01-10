@@ -1,0 +1,20 @@
+apiVersion: tf.crossplane.io/v1alpha1
+kind: Workspace
+metadata:
+  name: example-remote
+  namespace: nethopper
+  annotations:
+    # The terraform workspace will be named 'myworkspace'. If you omit this
+    # annotation it would be derived from metadata.name - e.g. 'example-remote'.
+    crossplane.io/external-name: myworkspace
+    argocd.argoproj.io/sync-wave: "4"
+spec:
+  forProvider:
+    source: Remote
+    # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
+    module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/eks-aws
+  writeConnectionSecretToRef:
+    namespace: nethopper
+    name: terraform-workspace-example-remote
+  providerConfigRef:
+    name: tfconfig
