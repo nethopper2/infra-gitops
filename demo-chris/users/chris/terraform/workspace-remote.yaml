@@ -12,7 +12,7 @@ spec:
   forProvider:
     source: Remote
     # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
-    module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/aws-vpc
+    module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
   writeConnectionSecretToRef:
     namespace: nethopper
     name: terraform-workspace-example-remote
