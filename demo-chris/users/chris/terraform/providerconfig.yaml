@@ -15,7 +15,7 @@ spec:
     secretRef:
       namespace: nethopper
       name: aws-creds
-      key: credentials
+      key: creds
 #   - filename: git-credentials
 #     source: Secret
 #     secretRef:
