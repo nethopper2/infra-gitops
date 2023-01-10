@@ -1,7 +1,7 @@
-provider "aws" {
- shared_credentials_file = "aws-creds.ini"
- region = "us-east-2"
-}
+# provider "aws" {
+#  shared_credentials_file = "aws-creds.ini"
+#  region = "us-east-2"
+# }
 // Modules _must_ use remote state. The provider does not persist state.
 terraform {
  backend "kubernetes" {
