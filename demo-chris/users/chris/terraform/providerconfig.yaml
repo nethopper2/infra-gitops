@@ -25,18 +25,18 @@ spec:
   # This optional configuration block can be used to inject HCL into any
   # workspace that uses this provider config, for example to setup Terraform
   # providers.
-#   configuration: |
-#       provider "aws" {
-#         shared_credentials_file = "aws-creds.ini"
-#         region = "us-east-2"
-#       }
+  configuration: |
+      provider "aws" {
+        shared_credentials_file = "aws-creds.ini"
+        region = "us-east-2"
+      }
 
-#       // Modules _must_ use remote state. The provider does not persist state.
-#       terraform {
-#         backend "kubernetes" {
-#           secret_suffix     = "providerconfig-default"
-#           namespace         = "nethopper"
-#           in_cluster_config = true
-#         }
-#       }
+      // Modules _must_ use remote state. The provider does not persist state.
+      terraform {
+        backend "kubernetes" {
+          secret_suffix     = "providerconfig-default"
+          namespace         = "nethopper"
+          in_cluster_config = true
+        }
+      }
 
