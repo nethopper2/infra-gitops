@@ -1,7 +1,7 @@
 apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
-  name: example-remote
+  name: example-remote-eks
   namespace: nethopper
   annotations:
     # The terraform workspace will be named 'myworkspace'. If you omit this
@@ -15,6 +15,6 @@ spec:
     module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/eks-aws
   writeConnectionSecretToRef:
     namespace: nethopper
-    name: terraform-workspace-example-remote
+    name: terraform-workspace-example-remote-eks
   providerConfigRef:
     name: tfconfig
