@@ -9,7 +9,7 @@ spec:
     # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
     module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
   writeConnectionSecretToRef:
-    namespace: nethopper
+    namespace: test123
     name: terraform-workspace-example-remote
   providerConfigRef:
     name: tfconfig
