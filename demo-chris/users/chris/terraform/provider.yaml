@@ -3,4 +3,4 @@ kind: Provider
 metadata:
   name: tfconfig
 spec:
-  package: crossplane/provider-terraform:master
+  package: crossplane/provider-terraform:v0.6.0
