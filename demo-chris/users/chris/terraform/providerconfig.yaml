@@ -10,7 +10,7 @@ spec:
   # Crossplane provider config, but could use multiple Terraform providers each
   # with their own credentials.
   credentials:
-  - filename: caws-creds.ini
+  - filename: aws-creds.ini
     source: Secret
     secretRef:
       namespace: nethopper
