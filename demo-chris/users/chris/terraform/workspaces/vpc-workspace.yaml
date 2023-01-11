@@ -2,7 +2,6 @@ apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
   name: example-remote
-  namespace: nethopper
 spec:
   forProvider:
     source: Remote
