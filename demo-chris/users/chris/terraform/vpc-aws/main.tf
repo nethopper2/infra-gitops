@@ -1,6 +1,6 @@
 provider "aws" {
   shared_credentials_file = "aws-creds.ini"
-  region = "us-east-2"
+  region = "us-west-1"
 }
 
 // Modules _must_ use remote state. The provider does not persist state.
@@ -15,6 +15,6 @@ resource "aws_vpc" "main" {
  cidr_block = "10.0.0.0/16"
  
  tags = {
-   Name = "Terraform Provider VPC"
+   Name = "Terraform Provider VPC for chris"
  }
 }
