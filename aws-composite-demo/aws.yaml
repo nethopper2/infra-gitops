@@ -73,7 +73,7 @@ spec:
               role: nodegroup
           subnetSelector:
             matchLabels:
-              access: public
+              access: spec.metadata.name
           scalingConfig:
             minSize: 1
             maxSize: 10
@@ -258,7 +258,7 @@ spec:
       metadata:
         labels:
           zone: us-east-2a
-          access: public
+          access: spec.metadata.name
       spec:
         forProvider:
           region: us-east-2
@@ -281,7 +281,7 @@ spec:
       metadata:
         labels:
           zone: us-east-2b
-          access: public
+          access: spec.metadata.name
       spec:
         forProvider:
           region: us-east-2
@@ -304,7 +304,7 @@ spec:
       metadata:
         labels:
           zone: us-east-2c
-          access: public
+          access: spec.metadata.name
       spec:
         forProvider:
           region: us-east-2
@@ -349,16 +349,16 @@ spec:
                 matchControllerRef: true
                 matchLabels:
                   zone: us-east-2a
-                  access: public
+                  access: spec.metadata.name
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
                   zone: us-east-2b
-                  access: public
+                  access: spec.metadata.name
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
                   zone: us-east-2c
-                  access: public
+                  access: spec.metadata.name
         providerConfigRef:
           name: awsconfig
