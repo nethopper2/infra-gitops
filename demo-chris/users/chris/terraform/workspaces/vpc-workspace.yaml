@@ -1,14 +1,14 @@
-apiVersion: tf.crossplane.io/v1alpha1
-kind: Workspace
-metadata:
-  name: example-remote
-spec:
-  forProvider:
-    source: Remote
-    # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
-    module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
-  writeConnectionSecretToRef:
-    namespace: test123
-    name: terraform-workspace-example-remote
-  providerConfigRef:
-    name: tfconfig
+# apiVersion: tf.crossplane.io/v1alpha1
+# kind: Workspace
+# metadata:
+#   name: example-remote
+# spec:
+#   forProvider:
+#     source: Remote
+#     # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
+#     module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
+#   writeConnectionSecretToRef:
+#     namespace: test123
+#     name: terraform-workspace-example-remote
+#   providerConfigRef:
+#     name: tfconfig
