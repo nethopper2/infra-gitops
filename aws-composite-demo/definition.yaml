@@ -43,7 +43,7 @@ spec:
                     type: string
                 required:
                 - nodeSize
-                  accessLabel
+                - accessLabel
             required:
             - parameters
           status:
