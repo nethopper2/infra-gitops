@@ -8,6 +8,9 @@ spec:
     source: Remote
     # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
     module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/eks-aws
+    vars:
+    - key: region
+      value: us-west-1
   writeConnectionSecretToRef:
     namespace: test123
     name: terraform-workspace-example-remote-eks
