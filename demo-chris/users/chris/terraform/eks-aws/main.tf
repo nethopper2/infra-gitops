@@ -7,12 +7,20 @@ provider "aws" {
   region = var.region
 #  shared_credentials_files = ["/home/chris/.aws/credentials"]
   shared_credentials_file = "aws-creds.ini"
-
 }
 
 provider "kubernetes" {
   host                   = module.eks.cluster_endpoint
   cluster_ca_certificate = base64decode(module.eks.cluster_certificate_authority_data)
+}
+    
+#Modules _must_ use remote state. The provider does not persist state.
+terraform {
+  backend "kubernetes" {
+    secret_suffix     = "providerconfig-default"
+    namespace         = "nethopper"
+    in_cluster_config = true
+  }
 }
 
 data "aws_availability_zones" "available" {}
