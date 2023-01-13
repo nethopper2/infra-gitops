@@ -73,7 +73,7 @@ spec:
               role: nodegroup
           subnetSelector:
             matchLabels:
-              access: spec.metadata.name
+              access: public
           scalingConfig:
             minSize: 1
             maxSize: 10
@@ -83,6 +83,8 @@ spec:
         providerConfigRef:
           name: awsconfig
     patches:
+    - fromFieldPath: spec.parameters.accessLabel
+      toFieldPath: spec.forProvider.subnetSelector.matchLabels.access
     - fromFieldPath: spec.parameters.nodeSize
       toFieldPath: spec.forProvider.instanceTypes[0]
       transforms:
@@ -258,7 +260,7 @@ spec:
       metadata:
         labels:
           zone: us-east-2a
-          access: spec.metadata.name
+          access: public
       spec:
         forProvider:
           region: us-east-2
@@ -274,6 +276,9 @@ spec:
               value: shared
         providerConfigRef:
           name: awsconfig
+    patches:
+      - fromFieldPath: spec.parameters.accessLabel
+        toFieldPath: metadata.labels.access
   - name: subnet-nodepool-1b
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -281,7 +286,7 @@ spec:
       metadata:
         labels:
           zone: us-east-2b
-          access: spec.metadata.name
+          access: public
       spec:
         forProvider:
           region: us-east-2
@@ -297,6 +302,10 @@ spec:
               value: shared
         providerConfigRef:
           name: awsconfig
+    patches:
+      - fromFieldPath: spec.parameters.accessLabel
+        toFieldPath: metadata.labels.access
+
   - name: subnet-nodepool-1c
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -304,7 +313,7 @@ spec:
       metadata:
         labels:
           zone: us-east-2c
-          access: spec.metadata.name
+          access: public
       spec:
         forProvider:
           region: us-east-2
@@ -320,6 +329,9 @@ spec:
               value: shared
         providerConfigRef:
           name: awsconfig
+    patches:
+      - fromFieldPath: spec.parameters.accessLabel
+        toFieldPath: metadata.labels.access
   - name: gateway
     base:
       apiVersion: ec2.aws.crossplane.io/v1beta1
@@ -349,16 +361,24 @@ spec:
                 matchControllerRef: true
                 matchLabels:
                   zone: us-east-2a
-                  access: spec.metadata.name
+                  access: public
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
                   zone: us-east-2b
-                  access: spec.metadata.name
+                  access: public
             - subnetIdSelector:
                 matchControllerRef: true
                 matchLabels:
                   zone: us-east-2c
-                  access: spec.metadata.name
+                  access: public
         providerConfigRef:
           name: awsconfig
+    patches:
+      - fromFieldPath: spec.parameters.accessLabel
+        toFieldPath: spec.forProvider.association[0].subnetIdSelector.matchLabels.access
+      - fromFieldPath: spec.parameters.accessLabel
+        toFieldPath: spec.forProvider.association[1].subnetIdSelector.matchLabels.access
+      - fromFieldPath: spec.parameters.accessLabel
+        toFieldPath: spec.forProvider.association[2].subnetIdSelector.matchLabels.access
+

@@ -38,8 +38,12 @@ spec:
                     description: The minimum number of nodes
                     type: integer
                     default: 1
+                  accessLabel:
+                    description: Cluster scoped subnet label
+                    type: string
                 required:
                 - nodeSize
+                  accessLabel
             required:
             - parameters
           status:
