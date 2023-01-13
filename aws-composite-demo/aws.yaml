@@ -376,9 +376,9 @@ spec:
           name: awsconfig
     patches:
       - fromFieldPath: spec.parameters.accessLabel
-        toFieldPath: spec.forProvider.association[0].subnetIdSelector.matchLabels.access
+        toFieldPath: spec.forProvider.associations[0].subnetIdSelector.matchLabels.access
       - fromFieldPath: spec.parameters.accessLabel
-        toFieldPath: spec.forProvider.association[1].subnetIdSelector.matchLabels.access
+        toFieldPath: spec.forProvider.associations[1].subnetIdSelector.matchLabels.access
       - fromFieldPath: spec.parameters.accessLabel
-        toFieldPath: spec.forProvider.association[2].subnetIdSelector.matchLabels.access
+        toFieldPath: spec.forProvider.associations[2].subnetIdSelector.matchLabels.access
 
