@@ -1,15 +1,15 @@
-# apiVersion: tf.crossplane.io/v1alpha1
-# kind: Workspace
-# metadata:
-#   name: example-remote-eks
-#   namespace: nethopper
-# spec:
-#   forProvider:
-#     source: Remote
-#     # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
-#     module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/eks-aws
-#   writeConnectionSecretToRef:
-#     namespace: nethopper
-#     name: terraform-workspace-example-remote-eks
-#   providerConfigRef:
-#     name: tfconfig
+apiVersion: tf.crossplane.io/v1alpha1
+kind: Workspace
+metadata:
+  name: example-eks
+  namespace: nethopper
+spec:
+  forProvider:
+    source: Remote
+    # module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/vpc-aws
+    module: git::https://github.com/nethopper2/infra-gitops.git//demo-chris/users/chris/terraform/eks-aws
+  writeConnectionSecretToRef:
+    namespace: test123
+    name: terraform-workspace-example-remote-eks
+  providerConfigRef:
+    name: tfconfig
