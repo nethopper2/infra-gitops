@@ -1,0 +1,17 @@
+apiVersion: tf.crossplane.io/v1alpha1
+kind: Workspace
+metadata:
+  name: remote-eks-dev
+  namespace: devops-admin-tf
+spec:
+  forProvider:
+    source: Remote
+    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/eks-aws
+    vars:
+    - key: region
+      value: us-west-1
+  writeConnectionSecretToRef:
+    namespace: tfw-remote-eks-dev
+    name: remote-eks-dev
+  providerConfigRef:
+    name: tfconfig
