@@ -1,7 +1,7 @@
 apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
-  name: remote-eks-dev
+  name: remote-eks-qa
   namespace: devops-admin-tf
 spec:
   forProvider:
@@ -11,7 +11,7 @@ spec:
     - key: region
       value: us-east-2
   writeConnectionSecretToRef:
-    namespace: tfw-remote-eks-dev
-    name: remote-eks-dev
+    namespace: tfw-remote-eks-qa
+    name: remote-eks-qa
   providerConfigRef:
     name: tfconfig
