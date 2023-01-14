@@ -6,7 +6,7 @@ metadata:
 spec:
   forProvider:
     source: Remote
-    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/eks-aws
+    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/modules/eks-aws
     vars:
     - key: region
       value: us-east-2
