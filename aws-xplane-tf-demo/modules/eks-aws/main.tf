@@ -5,7 +5,6 @@
 # You should **not** schedule deployments and services in this workspace. This keeps workspaces modular (one for provision EKS, another for scheduling Kubernetes resources) as per best practices.
 provider "aws" {
   region = var.region
-#  shared_credentials_files = ["/home/chris/.aws/credentials"]
   shared_credentials_file = "aws-creds.ini"
 }
 
@@ -26,7 +25,7 @@ terraform {
 data "aws_availability_zones" "available" {}
 
 locals {
-  cluster_name = "education-eks-${random_string.suffix.result}"
+  cluster_name = "xplane-tf-eks-demo-${random_string.suffix.result}"
 }
 
 resource "random_string" "suffix" {
