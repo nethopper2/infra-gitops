@@ -24,7 +24,7 @@ Each project is detailed in the following sub-sections.
 This project provides three workspaces, *remote-eks-dev/remote-eks-prod/remote-eks-qa*,
 which create three EKS clusters in AWS. They are intended to be edge clusters
 (no EIP) in an application network. Consider dev/prod/qa as EKS cluster
-instantiations of the same Composition/XRD.
+instantiations of the same TF modules directory.
 
 Each workspace resides in its own sub-directory under ./workspace/eks-aws.
 
