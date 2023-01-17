@@ -2,8 +2,6 @@ apiVersion: apiextensions.crossplane.io/v1
 kind: CompositeResourceDefinition
 metadata:
   name: compositekubernetesclusters.devopstoolkitseries.com
-  annotations:
-    argocd.argoproj.io/sync-wave: "-1"
 spec:
   connectionSecretKeys:
   - kubeconfig
