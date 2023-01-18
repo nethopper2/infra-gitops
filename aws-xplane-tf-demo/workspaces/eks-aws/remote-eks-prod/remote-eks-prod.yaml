@@ -2,7 +2,7 @@ apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
   name: remote-eks-prod
-  namespace: devops-admin-tf
+  namespace: devops-admin-xp
 spec:
   forProvider:
     source: Remote
