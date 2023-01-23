@@ -15,5 +15,5 @@ spec:
     # version: "1.20"
     # minNodeCount: 2
   writeConnectionSecretToRef:
-    namespace: devops-admin-xp
+    namespace: devops-admin-tf
     name: eks-cluster-prod
