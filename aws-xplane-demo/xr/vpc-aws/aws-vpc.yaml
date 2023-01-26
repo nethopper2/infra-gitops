@@ -1,7 +1,7 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: VPC
 metadata:
-  name: mike-vpc
+  name: xplane-demo-aws-vpc
 spec:
   forProvider:
     region: us-east-2
@@ -12,9 +12,9 @@ spec:
     - key: Environment
       value: Dev
     - key: Owner
-      value: Mike
+      value: Nethopper
     - key: Name
-      value: mike-vpc
+      value: xplane-demo-aws-vpc
     instanceTenancy: default
   providerConfigRef:
     name: awsconfig
