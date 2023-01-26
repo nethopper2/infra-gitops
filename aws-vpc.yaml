@@ -17,4 +17,4 @@ spec:
       value: mike-vpc
     instanceTenancy: default
   providerConfigRef:
-    name: awconfig
+    name: awsconfig
