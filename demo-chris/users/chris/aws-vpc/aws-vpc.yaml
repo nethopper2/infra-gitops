@@ -14,7 +14,7 @@ spec:
     - key: Owner
       value: Mike
     - key: Name
-      value: chris-vpc
+      value: chris-vpc-update2
     instanceTenancy: default
   providerConfigRef:
     name: awsconfig
