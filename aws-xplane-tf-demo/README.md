@@ -11,10 +11,12 @@ usabilty the sub-directories should have the same name
 (e.g. *eks-aws* under modules and workspaces).
 
 The **modules** directory contains project scoped TF modules required to build
-the resource.
+the resource. For demo purposes this directory is considered existing TF a 
+customer would bring.
 
 The **workspaces** directory contain project scoped TF workspaces required for
-a resource to be created and managed by Crossplane.
+a resource to be created and managed by Crossplane. These workspaces are used by
+Crossplane to instantiate infra in the corresponding modules directory.
 
 
 ## Projects
