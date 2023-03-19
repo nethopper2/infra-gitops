@@ -1,0 +1,16 @@
+apiVersion: tf.crossplane.io/v1alpha1
+kind: Workspace
+metadata:
+  name: vpc-azure
+spec:
+  forProvider:
+    source: Remote
+    module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/vpc-azure
+    vars:
+    - key: region
+      value: westus2
+  writeConnectionSecretToRef:
+    namespace: default
+    name: terraform-vpc-azure
+  providerConfigRef:
+    name: azureconf
