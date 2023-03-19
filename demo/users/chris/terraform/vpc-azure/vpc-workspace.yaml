@@ -6,9 +6,6 @@ spec:
   forProvider:
     source: Remote
     module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/vpc-azure
-    vars:
-    - key: region
-      value: westus2
   writeConnectionSecretToRef:
     namespace: default
     name: terraform-vpc-azure
