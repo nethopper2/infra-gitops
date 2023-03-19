@@ -10,6 +10,15 @@ terraform {
   required_version = ">= 1.1.0"
 }
 
+// Modules _must_ use remote state. The provider does not persist state.
+terraform {
+  backend "kubernetes" {
+    secret_suffix     = "providerconfig-default"
+    namespace         = "default"
+    in_cluster_config = true
+  }
+}
+
 provider "azurerm" {
   features {}
   client_id = "40872f6d-74b1-4f0c-a560-7d754d8fd3dd"
