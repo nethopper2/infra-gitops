@@ -9,6 +9,12 @@ spec:
     vars:
     - key: region
       value: westus2
+    varFiles:
+    - source: SecretKey
+      secretKeyRef:
+        namespace: default
+        name: vpc-azure-tfvars
+        key: terraform.tfvars
   writeConnectionSecretToRef:
     namespace: default
     name: terraform-vpc-azure
