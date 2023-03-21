@@ -6,9 +6,9 @@ spec:
   forProvider:
     source: Remote
     module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/vpc-azure
-    vars:
-    - key: region
-      value: westus2
+#     vars:
+#     - key: region
+#       value: westus2
     varFiles:
     - source: SecretKey
       secretKeyRef:
