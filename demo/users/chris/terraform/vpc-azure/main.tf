@@ -1,6 +1,8 @@
 # Configure the Azure provider
 variable "client_secret" {
   type = string
+  description = "azure client secret for the appropriate service principle below"
+  default = "abcde"
 }
 
 terraform {
