@@ -1,11 +1,11 @@
 apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
-  name: vpc-azure
+  name: aks-azure
 spec:
   forProvider:
     source: Remote
-    module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/vpc-azure
+    module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/aks-azure
 # NOTE: Dont' define variables that you don't use, because this causes TF warning that could complicate Crossplane status
 #     vars:
 #     - key: region
@@ -18,6 +18,6 @@ spec:
         key: terraformtfvars
   writeConnectionSecretToRef:
     namespace: default
-    name: terraform-vpc-azure
+    name: terraform-aks-azure
   providerConfigRef:
     name: azureconf
