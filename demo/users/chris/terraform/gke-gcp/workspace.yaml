@@ -7,9 +7,11 @@ spec:
     source: Remote
     module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/gke-gcp
 # NOTE: Dont' define variables that you don't use, because this causes TF warning that could complicate Crossplane status
-#     vars:
-#     - key: region
-#       value: westus2
+    vars:
+    - key: region
+      value: us-central1
+    - key: project-id
+      value: test-dd662
     # varFiles:
     # - source: SecretKey
     #   secretKeyRef:
