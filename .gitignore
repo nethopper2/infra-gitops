@@ -1,5 +1,5 @@
 **/secrets.yaml
 **/terraform-provider*
-**/.terraform*
-**/*.tfstate*
-**/*.tfvars*
+**/.terraform.lock*
+**/terraform.tfstate*
+**/*.secret
