@@ -10,7 +10,7 @@ spec:
     vars:
     - key: region
       value: us-central1
-    - key: project-id
+    - key: project_id
       value: test-dd662
     # varFiles:
     # - source: SecretKey
