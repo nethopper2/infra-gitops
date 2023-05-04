@@ -5,7 +5,7 @@
 provider "google" {
   project = var.project_id
   region  = var.region
-  credentials = gcp-creds.ini
+  credentials = "gcp-creds.ini"
 }
 
 // Modules _must_ use remote state. The provider does not persist state.
