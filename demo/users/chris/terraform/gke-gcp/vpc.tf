@@ -3,8 +3,8 @@
 
 
 provider "google" {
-  project = var.project_id
-  region  = var.region
+  project = "test-dd662"
+  region  = "us-central1"
   credentials = "gcp-creds.ini"
 }
 
@@ -26,7 +26,7 @@ resource "google_compute_network" "vpc" {
 # Subnet
 resource "google_compute_subnetwork" "subnet" {
   name          = "chris-subnet"
-  region        = us-central1
+  region        = "us-central1"
   network       = google_compute_network.vpc.name
   ip_cidr_range = "10.10.0.0/24"
 }
