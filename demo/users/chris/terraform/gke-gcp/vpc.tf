@@ -3,7 +3,7 @@
 
 
 provider "google" {
-  project = "test-dd662"
+  project = var.project_id
   region  = "us-central1"
   credentials = "gcp-creds.ini"
 }
