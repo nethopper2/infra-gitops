@@ -4,14 +4,14 @@ variable "project_id" {
   description = "project id"
 }
 
-# variable "region" {
-#   description = "region"
-# }
+variable "region" {
+  description = "region"
+}
 
 
 provider "google" {
   project = var.project_id
-  region  = "us-central1"
+  region  = var.region
   credentials = "gcp-creds.ini"
 }
 
