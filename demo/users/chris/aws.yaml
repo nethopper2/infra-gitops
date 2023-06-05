@@ -5,18 +5,17 @@ metadata:
     sealedsecrets.bitnami.com/cluster-wide: 'true'
     nethopper.io/controlled: 'true'
     nethopper.io/controlled-type: iac
-    nethopper.io/iac-provider-key: aws
-    nethopper.io/iac-provider-name: AWS
-    nethopper.io/generated-at: '2023-05-24T13:09:56-04:00'
-    nethopper.io/generator-version: 4.5.1
+    nethopper.io/generated-at: '2023-06-05T06:57:23-04:00'
+    nethopper.io/generator-version: 4.6.0
   name: aws
   namespace: default
 spec:
   encryptedData:
-    creds: >-
-      AgDJqdX4T/zeftS2NXSpLIBhVRZMniMQYweCDh2jNOvGwQ2kw9iJFQ/hHl+Ps5GeTweBaTsTJQulrNQrYdCjxsweJVvMjC63dGHO/X1uXlx8bH8qnK+65G3CAIFdUikpDfF8P5gOoQu5rCBHNS98b14OZbilFu3/yKtwTJIs5NhCbz6FcZuF2+FyaBJG36Ck1JKog2tmk/gARkeGo7VZ3QFgCuiQMTHk3YtpLscxgV9yGm5xs6JQd3mBDJpdJMZjWLnM2a7j/KNsyOcxZFvTmlrQ++3hhI6kkpsCLorI/lxueNV364iIHVzerqURpvsTF+K2hfxxu02qm6AUQ2hRLlBztwxPQrFqQalG0WPf+gsNmQCDIRW9BqBz66aYzWLsnuLg77eBB3SygNnRTXa5DVakfFxtxkFp3LjP+7nrO4tlJ3CMp/rXYJqnj652JQX3h30e9ZTwmMd+GFRrtNQn4rrwW3H82tBbCws+LpV6yT56o/fL+F1BJo+/Z5gbju23e+RSS1yqmDSWKR8Um4rsBmmR823WPw1KwMaybPDR7ld2j96Zz7QYpQdvZMRKzgC1HCjSOG9VocEJIq4zZA9BMhT6guCtgJ9Fr2G67QJWcFBW5C6AHRglYSWiwfdtSz/IVkgEdTYUUykPjVeG9FG+vmfJS5NB7/AYoOS/rBGH4r7kdIxrVFaGxPXol4VU8MUVx6JGvohwZfVMT/PT0GDQUoHnMFaP7lQbeczEuEonM9oC5c6CyFSZOyrHrE/B98C0ZMsXbobbrGTVgR8yLubo5MnkouyMLnR/Bn485gwByv5R9qoKy+e50A3CgcngIWDoBd9KOdpl/LoQinKM6L7D+kxqME1a
+    aws-creds.ini: >-
+      AgAOtJy8cOgbEnBVX1bd8hVwe7B3ioCyM9p+t5JtAT2rRA7/Jk5vODQjT92zlJ4cbZ4y38BtRLJ6ZdupgosN3yIFgENhHTAMamHO+k/rF/pniBC4UyQl2p71tdp3I2xUqorVVSwU9toyE+GYWs44AZsNovI6X8d9mJWtn38IP8l2GB/Sbgash1lvdsF0I+7qYimeh0sG6RPfajLCyQfWaOkHR56WKx3w6gU+acpGZcok0co0YHjyVNhmCBi4SAZYjTELFGOqzI0JnLYiF8phUo0qmSXxfVtXsxietITRPPftFoig+fqFbZ2gaBYgjowfhwxpdHo+r5lO+qpJ8/pb1ZkN0jdL6wYf2bBOLwaqOS3SgN58AwODpRvb7gwKiqA8psZ9bT+ydie4n2IFLlK5mLduhAyMzEaeC16mbpflXX4k5TObvwsugb0EeniqofckjDiWPAhZKD+Zl/s91zomhMvIXFNECvbMwLDPSFMl9audvH0ud0hE41pmAeUW6d3EYDddvyZVDr/j8zJS1YNW1cz8Dz+z0vhvKhcRWCYbRvSPL/CA5rJj+6r1fEXm8TRTsvJWEDiOGp6X0IgsLVn/bYznPWgYNZ4R6b/Xrw52NrWZv1hS1eUurYEaAQ3XB7NoQTKGSdTT3ilnpgdRHMbaQIPGvUBsEf8oxWU88Vz3Sk4ovebsC6qRdPMdv7Jsaqwj+6CBJJKbQGk9n6MxmzDZ4adigyhG+eggsiVBVGNbK4zS/nfdk2Z130Wx49mbJbZ8CGkPlWCf2bA+OJcW1ShX9MBt8DThGeBWO/PUcKq7HUcRbAcAOq61h94BLxsYyZ48f2uRA5aBO4fG6kRyNdFeoupAQiLulA==
   template:
     metadata:
       annotations: *ref_0
       name: aws
     type: Opaque
+
