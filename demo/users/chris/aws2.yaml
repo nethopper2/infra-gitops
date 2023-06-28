@@ -1,0 +1,20 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations: &ref_0
+    sealedsecrets.bitnami.com/cluster-wide: 'true'
+    nethopper.io/controlled: 'true'
+    nethopper.io/controlled-type: iac
+    nethopper.io/generated-at: '2023-06-28T08:30:57-04:00'
+    nethopper.io/generator-version: 4.6.1
+  name: awscreds
+  namespace: default
+spec:
+  encryptedData:
+    awscreds: >-
+      AgCQddzOn6RhmX8aGWg4q+0hiBOMkKUNu8AlgwgZneG8RQratM+ShT+3LdkYiK/9HJVVmY/Qd5iMwkj4HIF4lNVwJo/s5DKLun8K2+NcrKfDQxZxEgX5QeJvvIQlv343ZOXMh/k8D9dYlKzx0VZVOsZgbHRQf/Oi2+SFjXo7s3nrqcq/gkRT2kUBhlfScvOLFhWW/Dqd+1iLnUBWjPlq0m2dPFeDKsIWQ7I0blI+f0P48mT9r0/kANi6OjlkTF53YDZUA35l2W0cnHQetju03cByFw3owOvczrkDhbG5WSN6mCrO1BaNdNopGY2aTe9vFM24/GnJAPfq0cjXf4aTbO68D5T8X/QKjKFvowldXzUmLD7YhJ2V4Yz7LWv+SjfENyeJQgEcFDZr3ZjBW8/88JXkWXEE39B6RRZF7R4wThBPjXaSwxxQZVQTzq+WFsSOOLHePMGEmtvVqS24I/bfdVnBjJ6v5c3P1KcmhjmRlsX3IuBDnlQmzbGKfkWRJYeYtfn5/66Qkwi7fa+anx7JyCWuxB4Sn2krJSAXXnKNUuZ4zwt0B3IPkxkgto8+Xjt3/0S53oU+c3bhb2AJHxIFI962pm9gXXaPXh/0wXr+48MtdtEntogL84sMn/1DsdmgVwOqmYPQ9ZUxivXiL06fKAmn6J0w23y1NG0t3suwyAUCtumachqWQ7gFhI+vgrTaUO8Dvkb+wYAItyCmNZbsKkjmN9ldfdxKlzzoVSOrajGcTjC0FhvhCSSQsCDXKywXzSH5CC8X7d8ZUo/uedlDWsvBgmXg+lal3D8ayGL+K7KyTlc4S7yvQoKvw0Nt6YMGeGTUgxp8hngpE9/Et8Ydw0Si/MZ9/A==
+  template:
+    metadata:
+      annotations: *ref_0
+      name: awscreds
+    type: Opaque
