@@ -5,18 +5,19 @@ metadata:
     sealedsecrets.bitnami.com/cluster-wide: 'true'
     nethopper.io/controlled: 'true'
     nethopper.io/controlled-type: iac
-    nethopper.io/generated-at: '2023-07-12T10:01:22-04:00'
+    nethopper.io/generated-at: '2023-07-12T10:13:26-04:00'
     nethopper.io/generator-version: 4.6.1
-  name: awscreds
+  name: awscreds2
   namespace: default
 spec:
   encryptedData:
-    awscreds: >-
-      AgACih92pK+mKFjsl7hoxZw33HD51h3KvDta/MxzG9SB+52Mgmht2C/2yuxaeLZxQgwEGrppstKEpfNLdpTcM6PSjH1io3s+8GP31LwC3DMBLziwAcBly0ty8CeR+d0AiYGzVoKDP4+CgjKPmq49LeR/rUPXy27vtfVIyJrz870hHIQgyngHaHKqKyCJxdZrwG3NZyjNC/UTLk9WM+YmjlX+NdWytrZIJAH5S0kSs0WCmSath6OlZaIHlV0TBzXH2HiNY9Lj3lJqzVwUbv1VHU2RK+CtUoCGXX30/dGHGgrnl38XlI8jAwJBJy+W8+GX2aFSIBAAkY3b4jbRwvZvVPkr8hDzTNmxzSxxxz3of2fYvlTZZn0HWIlw/1ym70Jdu37mMhOO/tVDVmQo5Y1C5zi0FoPUsEyo/w+m9Ev2Wct068rb0InAL+EZTYwzECO1aOwsdfX8dYjp/PqX80c+wc2qm3ac44jljTTA/4n5U+dPU9Q9ZtKlOvoZ3CCwhdr1+pCnWo0p+sqMBKlGCTfEW2rIh99bs/uSKAZIcvSlgxSQmE/Ah6DOOjQbieftX/TV8J/PFdDLnf6VWbT/fqDZV5ZXHmJ0MRdbjD4Az9P5HWeNruCPKHk2apSc9rfQJ2x9WBnZpyLuO7Fff65C9q/MQaFbHIVF7EgJDJCQCY2hvtGxai/Wyk4t8TjtcszzGd2HyhfR4wqQTpNapN0EVxRZh1QjyK35RWibAuNWWvUQeX6v47R2o42rXw0a87GNvqfIyjS0rgFa3OKk1iKWsfmPF2AVBD4pI9nygN3jUMK9ZIUy0mJABEubnBxbSynSd1kPklfsdpYDyOu5/3YXn/RSM+yCZdlG+A==
+    awscreds2: >-
+      AgBRdx9EHD8OBTp2roidV0DVsoYUuVbJbbDgCSGTvx46kRtMZksGK7zfMZ5WC2IucDKgHoZFGEl2P+wE9+u8qrI+5JfQ5+WrNdBphalVEnUL5oM5NVWla7G3XPSXDhhAuyWnK0sCUcbqtnbRwCop5c292YslkwqadEkeDS4S+ACyZca+hcImOcjw+WPh/A/uusgaNQy7JEkFldLHVNd1PHXEHs5XymF2QmOHhDXjJNwYu/dmBIuRsoc+o6PRqBYhhMgHXQkvfM9MBISBH+KCNvPIWGzPxhDJ4AhhsltwBcPeIK5exfVKEItuY2f3fuiA+fLvjlfKyUVHzxLNN+Zc1Nx/0D8cv2qSN7dShx9bmL/NM6zv7oNUx139RICA6A5N/qmiPBJn2KakMmbn++uWPzFgrnRJz0IbxAzTnSdb148Ms3Fgmr6tS2XG5ojWxmWUm5Ztw3x37CBr7pC8TCSt/LvnWsY73nLKuu8RXgFS1AVNUehpc72J5uJnEEegEMrmxqlmYeevasfHgnNwyeH822GNluA2t2wm6YStWuumStSITbq2LBmnl+oKgul7q8XMtkhh8ZygVC/frHEMQ2d3tAcknntDRYfgjgo9YJqUd9jcz+k8MBIeBDNQuZaEdCY3x0Z/S6Wu6lGI1a4Tr9fRz+nfDRVYK0GHTefWPXn/fZYXrgsxf08aWSFpg+35bZfGzKqaNJNVQhLH82tZoB2r5vtGSkVLHytt/rXuzizzOnOmnF1sYlc+0hM1E7Af1twqqHlO6KvoLd2OZRPNwfZ6PMZ2D6L7nwOWeQn5BpAWRux14/CN5YSggh3WH/8X0jADohDjBJmNA/n7WDr7LAdcZU6lhht9Kw==
   template:
     metadata:
       annotations: *ref_0
-      name: awscreds
+      name: awscreds2
     type: Opaque
+
 
 
