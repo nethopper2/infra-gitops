@@ -5,14 +5,14 @@ metadata:
     sealedsecrets.bitnami.com/cluster-wide: 'true'
     nethopper.io/controlled: 'true'
     nethopper.io/controlled-type: iac
-    nethopper.io/generated-at: '2023-08-06T18:45:45-04:00'
-    nethopper.io/generator-version: 5.0.0
+    nethopper.io/generated-at: '2023-08-16T11:53:05-04:00'
+    nethopper.io/generator-version: 5.0.5
   name: awscreds
   namespace: default
 spec:
   encryptedData:
-    aws-creds.ini: >-
-      AgBq1m/72XjjOW+KYJT8h8mYdi6W41PetQgRmHK13fyzGsYZkn8BsKFVc9n/1B/54I95Zy6Vw01iKfWUrIi5P6eX+R+ruh3UDu9jiPkULN7T5we4FKWIMJqHs+/p8qx4vK7BnwkipW97iAfGyBrr87uiLf610Da/oBF+SJxz6GXKFX+lEHzHLQN51TiRj5HZ8uPYU/GWTLo0cYncnMo+z5HOdg4476w78v0X/j3nv+KaROQA+sCwP3c9vr/oaP46wi5pVuRjMUosuUpTMe6k1eivGORzagOYd6RRzu+gA0QC9OXuu5zdNRlrgc14b3m12nL9j/qXxErUGDl9F0YtnYCwV0R9GfaqDEe4VPZQIzefIdKnXN3Qg4sST3/ldWhp8v3U7iyuwlgxhx1812TaYnC84PLM6vqebLDkggQ70NT14JcJH/PgxDQlf6LHDjBMad6JE8mi/nbldtvBd4ZHFLOTNbuNv8m/npjCjp451nUknUM88mQk0RH/mKg8v6x8KVoyvQ9eWiN8Hz/rWMwZA0ZRNlxBvHP8kFO/awNz0jGT21z/+H2h3HvDtO5xMT4AbBvrKxOgQdlkUwUj0OwIAxCNtgr5QULFMqI6NcYl7/RQVUCElDfBR1Xoc5aJ0VZElJeCTB0nVIvzGNfxjnmF3WSAcY3Md0VNk1laeBZOxyFtUdcukKJpjpNdDMN3nj9VrTIKNpzEwUphf+0gD44oQcYg1A+cR7imlnLtns4Zkvn0UOrAdybXEFLdkGyWfuPWYVUVztWAxD/TnVG+LO8PX2siwzs6hVU9wjB8gmgCR3yVuOWeHzYoQTSD7JBzf6rgrxpxZfLbIOd30oA1rNpcW7XIMAqemw==
+    awscreds: >-
+      AgCFTx5PlBMVFGLm2/eItMeXTb1QfYuNAO1uIpJYBeN3C2ovL0aMQ864t2NMoEWKgk8Ahyd6WHupnx4Ke44M6AM5aq7eIGtmkdFs9Ho0AJNjqjoxJ78o3Gi/Gk1sl5L+wRZtCnpOJDgteRPAyhAHxxlW2CrMZO09pR17Kbctx2pkH9d7W6B5yrPnvcsiFTxh5ohDJRKGaRtbAvvI+eIl+7MqElG6TDyNZ6UDXGbJbvxZPXZc6TBp6PlSlP3iVR7Pq1LMvlIVpZNBhtZMfeisMRU7EYxSDacpXIZd6Y5QnpA3BFpW2YtVudyuznEA5IHSMo1BCujEsi+4Tz97ZJ+euFg14wiX5gHYCAhMcz3GVWUkJENDmnbBTqGTYyKNUsfAWDL57AGJg5L8ChmkMGGgaxOz3VFrR7H2KTYCSFZEslMI1JG4k//noKF3qmThwFnZxs1Fnqcb7nXKeDo06Wvf8Emazs359uGyORBj946UlkLvEqfZI/OU3+x4n2WJdem6KYBNjjUDJOTO/GsbguNH5O+rRevzldkbg4bbRWHvSpyn/ymSTB+QE1fGuvGcxrDwrkvhniBD62VXiHwJJXQ8WZscHKty6PrcDRhdWDW9xsoSWFA04TjuDBCVA+NuIcpWu1VOeuGUJi7mgVFajWBo9N3ykt3BgdyD+yTvs45XA/wgx6hC3i5BAO8edCAeee9Rcvfnohbx1I+JWuP8zS+ycYLTGgfISZvt6y3a3oe1oB9+3Uk41CNg9phrZa4G8fu1TeARi0snn3sD42Wx1cQVucMndUZf2XET/m8ulmmq3U7yekES7dd5WdiqV29EW7NZn7mnPjTiN/DaO5cLR4oXlNt4wWGCmw==
   template:
     metadata:
       annotations: *ref_0
