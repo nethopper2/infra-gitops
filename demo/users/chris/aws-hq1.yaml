@@ -7,16 +7,17 @@ metadata:
     nethopper.io/controlled-type: iac
     nethopper.io/iac-provider-key: custom
     nethopper.io/iac-provider-name: awsconf
-    nethopper.io/generated-at: '2023-09-13T11:03:58-04:00'
+    nethopper.io/generated-at: '2023-09-13T11:27:43-04:00'
     nethopper.io/generator-version: 5.1.0
-  name: aswcreds
+  name: awscredshq1
   namespace: default
 spec:
   encryptedData:
     awscreds: >-
-      AgAKQ1oT3tDLtu5ZOmeYJF2agF2tDg936V+lKN1OtKnj0sZOrHuoNQ2beOpk6QWyb1qFiuaH5FeJoWfLtWfBRgeyY7bQIg4FmqRB/18EIWgSXvs45hB6dfnopmJaf/12/gCuLz5UTMhfUF+COy+a7qVpafM2Y4lOwWRDCCebZuJYLP7uRj6WzrEeVs/P0GZGl9s1isOBh1muAnxzo1PPHr+sfgolR7+hwXcCXMhfG+r9u2hXpYE5hHlg0E+Yrd7zJeDU2fVSZ0Dm0K43DA0X5odRUKx90VVESdksNmIjFsoHVtdbDX/PRNKd26TV/UolXRnfWGvxvfPEBJe4pBlO1GFYqQs9L2Y9PcO5OTuJu0ZUjOIECH2l0LfxJhPgOy2Bo/wOPtiyLK7oS0DMk15BQ2r6wq6z6+RIxx7GhLINMX3yXL8u3yM+reloHKpYASBnILVZpcCAEnJDuoDJV75ER50G5599u+qKzZxHgcvg7ehENYFjMBArDRgJ9CJZKDGaZRbsqj3fmFQUSdM6M147tUwV/9pykG8cqJqt28PEe/QvAWGEyySGLqcKMSG0fHj7sCf1FTBtxwPKbz3QoU3N4M6Tg3+IywAC7fGclbiz0ERjXVSSeb4GmaloT44g3UHTnoYvaTIPD/KoGSCmbnvuXEpBBAdKuhI/Vw6WIQoy69GQX4t8slKBx2LEpFH7xqgexnljcx6WgmKiv5BzIDVbMZs989BCl0XvTupeMaNKvHlMkri3jdoHOSEEp6MMF9KifFaa4VHbTUju5EWHTqteMvowDiMDyHg0nbelu7YsRmDMJRvwthZ/Ue3dH2Px7dwp51VcG15G4WssdLwk0+GymuoTMlgMww==
+      AgDiiDwPTMBgCV4n5iSCPEX3jyX0fS9gxLoZa8C6Oh/4R5DPpPp9Sd6UJnXvfbkr9SlfZHZkoRhcH7aKiV0LCnzcrk2hDToaDP+Lk5Ckz2gWqMdgXz58b/W1DT4GSyQd/BCXTWIpzL2baXABsSfjxIRnUuOaHODriQG4ojPgpqLPxIDzCN+q2yYSkqvX7ZCt+d8eybVbGEo9JcHpgoZ3Sx12jQEmiD/7/YyD5XY3bGrF0GqKoorQnUlKrMekIdllnpK7V4eq6jpKlw7HKXykzqCrrQclmbHeBmWM6DJL+G0y1p44eXA82cmexMPlbjZSIYff1KUiafu3Ik6ZNg6FsFe8mSHSLaJY+QSCh2I2d67H6RNHjCLuBuSUf7QJXYds/wNLrXFVZayLAf2Irmci2y0HkCOOC11FPHlTBhNjbbIZxLSFSTbI/lXwaepPVxFtjGRuRYccSjb3R9YU9IMbH6WqWeslJ7TfMam/XSB45OuMu89taSi8W+aepW2zUzXSBkI7SptkWcE1Pd8OT5W0k97s0oNrm4iHVtc7SaoxM0GJU1KS+Q4+6/Gz6em1P/hbbMZqTvu1Ei4UAlgqoe8uLGWjHV5gxhxv+vmnzBbmM+p9g7b774r6ksfeqg9x6XP2pVLlFy5Kxw63WM5Pzo/AuQBcJUG7Rs6aV24VoEZZwPM14J7OtlJ3PnP/nMSba4dPn3q0Wu263B7XfR1kMmKSk4ZY081khheDBBk00oKyPAyNusg0DDAdMI9siFxo9ILM92VQvsRyCvVkJEfbnlmPbLFuTK7cq3RSdDlZC0dfRpYcH1bKoUmP2YS1C66Ni+xsmx0OhdNKaOOV9lkjh5UYkFCfGU05/A==
   template:
     metadata:
       annotations: *ref_0
-      name: aswcreds
+      name: awscredshq1
     type: Opaque
+
