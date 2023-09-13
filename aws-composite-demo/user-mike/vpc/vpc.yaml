@@ -2,7 +2,6 @@ apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: VPC
 metadata:
   annotations:
-    argocd.argoproj.io/tracking-id: 'mikes-vpc:ec2.aws.crossplane.io/VPC:nethopper/mike-vpc'
     crossplane.io/external-name: vpc-0cc45ae39729d023b
   name: mike-vpc
 spec:
