@@ -1,7 +1,6 @@
 apiVersion: ec2.aws.crossplane.io/v1beta1
 kind: VPC
 metadata:
-  annotations:
   name: mike-vpc
 spec:
   forProvider:
