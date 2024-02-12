@@ -1,0 +1,18 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  annotations: &ref_0
+    sealedsecrets.bitnami.com/cluster-wide: 'true'
+    nethopper.io/generated-at: '2024-02-12T13:47:55-05:00'
+    nethopper.io/generator-version: 6.0.0-alpha.4+001
+  name: temp
+  namespace: default
+spec:
+  encryptedData:
+    temp: >-
+      AgCpIUghHWwAjUubUzXmIUlO91bw+FSKXqH8wYyucRs7CdnjVytvtai4uIno96n9G2VyaYexZorSdRypJLEhkq/Abh6sEEBdg/tikWW5bUqkpFjvqFlcCEglFRwI+nY5LTCBxC1I0EEhj4nHK01cVVrstM8T8fTC2EiiPIIwXqnH0xKEGXl4fCqyLrN7ky1YtxTpPkHc9qEZY3TAXIm/PFYjJjXEsYUHHiKnrm5wj9UJT/9YuvVDXBKxBXZIOfX0UrundEwsNsnPZ34v1EqHpc9awuZyS59+M3Y8EQcbW2mZPL2YL/jIli6MnXmaWIcIZfizeuZSuFKRVAnYH8JtcFwrjqXocCaLJO5DOOJ1v+tBt5Kr67DegfLD0tzWJdLFLmxY0ZR9elMmF31+hRLyLBtlRgmfaTd+g/6wuLOe8aegt7QbaBF7gdVSfCPduK1/Sng9UwohBtQEK8QxNp/0Ess3+fJNs3UzefAOWPfA2cthRHQisAmx5/OUK1bDyZJu0leVx3F4eq49U4tcjM/Nqk3CsQDBgIgN6h0Bw78XfCBoXGigqUMojP3B543j4t81villnaB10m6ZSlAr/WXWKF1r9j0rtndXZVBP5wNuMLFSJHWCCP2aUTnv1q/lxdP1dIX6KfdEG0IKZrwfiFY/jzjeVRPXGGTgVz/+JUr14SBtTNBkl/lvz4Ud/CxZjjWrIfvTJowY
+  template:
+    metadata:
+      annotations: *ref_0
+      name: temp
+    type: Opaque
