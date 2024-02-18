@@ -1,0 +1,13 @@
+apiVersion: tf.crossplane.io/v1alpha1
+kind: Workspace
+metadata:
+  name: vpc-aws
+spec:
+  forProvider:
+    source: Remote
+    module: git::https://github.com/nethopper2/infra-gitops.git//demo/users/chris/terraform/vpc-aws
+  writeConnectionSecretToRef:
+    namespace: default
+    name: terraform-vpc-aws
+  providerConfigRef:
+    name: awsconf
