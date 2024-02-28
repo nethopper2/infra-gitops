@@ -5,16 +5,16 @@ metadata:
     sealedsecrets.bitnami.com/cluster-wide: 'true'
     nethopper.io/controlled: 'true'
     nethopper.io/controlled-type: iac
-    nethopper.io/generated-at: '2024-02-12T14:04:14-05:00'
-    nethopper.io/generator-version: 6.0.0-alpha.4+001
+    nethopper.io/iac-provider-key: AWS
+    nethopper.io/iac-provider-name: AWS
+    nethopper.io/generated-at: '2024-02-28T12:17:26-05:00'
+    nethopper.io/generator-version: 6.0.0-alpha.5+001
   name: aws-creds
   namespace: default
 spec:
   encryptedData:
-    aws_access_key_id: >-
-      AgCWTFEkhczFsQkJhbjLD2hsHbqvdPBBmDcpX09xzQBRYrkbGOyG/5TQR8ynQpR4t5PMSXBCQOnm1Grluvh5J7rpJBY6Zj/w8CD7qQrI8wTkrXPWpnE9HEInORc0Yk+//qbXTUVXW6hNQoZgzNJIY+V6UPMcco9rbVS5xG3h2ze7DWhk2hJXQ1MLjiGldgiKc6T9iWNLSKQ5sjI2D8defAxBemEOrLJAe2YBKz2yj4M6+HYzr8eWR0vjpev3y2Bmx555S7kTfHw31f72tyBWAw+UY7OqXWqBE8ZUuaBxBHSFwr6KXF9fu3JpGTMg9jG7kuZaKjoOkpiU3xS2D1+00Ba3GubmyeNDY0iluJ/o+YLEYHwByHzExIPfeuw5w24CQmgKoiK7pJeqy7ZRAKRK5TFuEyFAPYgUX5ymeAArbyOWXWfbaZU1RdE36vQAjZo7nIUkYnVVtw8pGP17EGDJJ2sCrX8BStdjvZBx5SojlZLkb0ZIUwHR1wRV7lftm8EDbeXHjLiw1/6OckNw4pcWaEQBt6fVLtPcQDfiBQ+kcJOz3b5CPWXK1FKzBPbKhUjzDaugJJ8FqDjsMosZwfkbeJcXMn78hyJok+/jvkPohyyS34jfeIU5FrlmUK6B5hP5X2UQ/1JBBut4qIIkBKnqyrwwSIvlO9DwcAIRA9IuF+nsDcS1HgF9W9Gng8c4557pz0arAtmxBqBZxg98519ak12vApwQyA==
-    aws_secret_access_key: >-
-      AgBlb6O+0KiC9ljuhnBdNEGfG/k8ivr/ODNr90VpC1IZpIDoZ0Zy93nRQistiff9UevCWhcyejGDAhCW/Y3OC87mphTG2I6yn9orVmVoHnlWjIQuxYXz2yNeBmIFQcCI5yGUK+XDRlnSKj6utJUwZHWZhU3PuE21ECfBRrDR80rE21tcZDtMvt9jvuDtjOZLcLTwumZQtHwsMsdMWWPk5ea0Rb8vB+5vMCXEred/0lXfXBz2JVDmVtuoBGyxrjWRd5pP8cRL8RFN/45Q/Qb9cGhrnEzw7FGtRNCueyXEX+ultcjzcG3jw5JA6FRAw/xCk1mkWdaF6+2eDFHNGpWQPnFQxzmObh62U3SSWQBV9kCiAQ4We1GtYF8DrDn9bFyxITMycSVwTY/IkJBNFYraROKCNo+MyD5OnTqEuBeQPtBgFpI0EGnx9/AdktNw888zF4qgWYaIWZSopUz3BkK8SdiB5N7dLsMubhmaTC26zCA48Ff0luLBhB4noxUJhc/N/lMPRD7WsGj30wmFPfEd8Eik9LO9Y/txzZ75vEEwZWEzZUvR+XXuxpn9hqbBEt+IXHDBL5CBZSizyyw5/0PKbOk8gJI4tq9dUDCrbzAk7lzJkjDwehxJixITvLdFMyOihyb/sPrMruNwiDyehyA+rJk4aP5+0C+FHzSTkUv6OEuIOpbqzbFdgOXqAXIehBvPLbh4ML1MAX8tF9bql6bclfn3vaqD+Kz9bJNdro1SSvyr5vD/attbPPp2
+    awsconf: >-
+      AgCBMt5tBhpp9ncHg73DYcZFrt2bzN2gvEDxMrL6OTzfRb0DCWyVOclFsLZGcINw79LhpczQNq5bbnm4mZXYDLneOSkcOn3xsWSWyh9s+go1Ou0MbAt3E16txePYv+2hDxueHS/fd+ikWppsbMqmrZAmrSD9TfsiYgwLXj6Cose8jD3egHz8nQFC1i6kXIe2RlaBebhQL4eZ1+KznPdLErc9nukmZRMmQdHAtqfh+Wuk5WMx+CFi67sRYsqcy+uoejMAEYhv++6JIZ2EfLUglVnFQYPg+lMunDTp5XSTlOtGb+BuwqwIci0yz8TJrClyVOzONYVp0xrwwOv2nD+w5+gHc2LPoGNGZvu5mw+kc/O4leQaOcOUFAm1y7yLJjb1rCK3rEeJwuNLLJRoZgV7LDe4f5dMfi1I1eJn1pFPGLII7Qw1yAQk59axx+gEsoXIOAhcmxAGMqaz6BvU8s7NyBVcY2izTWWyy9slGuGom7jdYm9WsA3HGeYnlGeQ4ruNZxQ6GzZ8w9/DK0B3FLspknX1xpU/OJcZoVR00PU0QwFAhmYUmBWEkanhmuVFVHQOEN3kbbrVxPwu0oO0TfCWur1Rx0E5iKLaPHle7ErwzpLdadw9ZX9eONobz5La6Gci1S5Mi9gsGfDzbifNOiK9otSPohjvxB8c8B6CJ8vTNyY7RaKNSuCvhRVzc7XEWduPidrClph3XnNaYpRY4eUfq/enA7TP5SzfjLffyLE49ALZMkKpP8djrVAPQdJUBxMjEjnitb07HDFJQ1HX/JGU2kPiZr7J8vpD1AxBhzZ7icngfaUQRuau1JVcSr9fTXg+qfDdN+nHTQQrjE78glCMIMYwYaVPGN4d54AwL9U=
   template:
     metadata:
       annotations: *ref_0
