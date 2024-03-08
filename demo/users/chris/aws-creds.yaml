@@ -7,16 +7,17 @@ metadata:
     nethopper.io/controlled-type: iac
     nethopper.io/iac-provider-key: AWS
     nethopper.io/iac-provider-name: AWS
-    nethopper.io/generated-at: '2024-02-28T12:17:26-05:00'
-    nethopper.io/generator-version: 6.0.0-alpha.5+001
-  name: aws-creds
+    nethopper.io/generated-at: '2024-03-08T18:41:22-05:00'
+    nethopper.io/generator-version: 6.0.0-alpha.7+001
+  name: awscreds
   namespace: default
 spec:
   encryptedData:
-    awsconf: >-
-      AgCBMt5tBhpp9ncHg73DYcZFrt2bzN2gvEDxMrL6OTzfRb0DCWyVOclFsLZGcINw79LhpczQNq5bbnm4mZXYDLneOSkcOn3xsWSWyh9s+go1Ou0MbAt3E16txePYv+2hDxueHS/fd+ikWppsbMqmrZAmrSD9TfsiYgwLXj6Cose8jD3egHz8nQFC1i6kXIe2RlaBebhQL4eZ1+KznPdLErc9nukmZRMmQdHAtqfh+Wuk5WMx+CFi67sRYsqcy+uoejMAEYhv++6JIZ2EfLUglVnFQYPg+lMunDTp5XSTlOtGb+BuwqwIci0yz8TJrClyVOzONYVp0xrwwOv2nD+w5+gHc2LPoGNGZvu5mw+kc/O4leQaOcOUFAm1y7yLJjb1rCK3rEeJwuNLLJRoZgV7LDe4f5dMfi1I1eJn1pFPGLII7Qw1yAQk59axx+gEsoXIOAhcmxAGMqaz6BvU8s7NyBVcY2izTWWyy9slGuGom7jdYm9WsA3HGeYnlGeQ4ruNZxQ6GzZ8w9/DK0B3FLspknX1xpU/OJcZoVR00PU0QwFAhmYUmBWEkanhmuVFVHQOEN3kbbrVxPwu0oO0TfCWur1Rx0E5iKLaPHle7ErwzpLdadw9ZX9eONobz5La6Gci1S5Mi9gsGfDzbifNOiK9otSPohjvxB8c8B6CJ8vTNyY7RaKNSuCvhRVzc7XEWduPidrClph3XnNaYpRY4eUfq/enA7TP5SzfjLffyLE49ALZMkKpP8djrVAPQdJUBxMjEjnitb07HDFJQ1HX/JGU2kPiZr7J8vpD1AxBhzZ7icngfaUQRuau1JVcSr9fTXg+qfDdN+nHTQQrjE78glCMIMYwYaVPGN4d54AwL9U=
+    awscreds: >-
+      AgBulG2pA6p3WJnmnK74X+D/j2OI4YUqe26gkytWx+UEcNceX1CQpBSGRaQBVzHboVsIkYkjOvukiCjJ+y8SvR6HBD7ctCobqknjiZ7eDummOgUmAdY0LWXWcS/2go43y7461ZT8RuFtc4bEY0n8Y1l36A0AYJjuYxDJinPVpiriQ2TDKWQXdZQqA9wKtsokg/esoqCmoF/Wt2mNSlDWvoHiGkBugTsQGPDoho9C/SXGFrW7vudufQds4BevJ+UwdsjOC/3v7S0R9hygQDKp7IIxHbkNCplUM8kteGUuEwQKYBxlE2mFOVlAi9qPV0h7ExKdcS+8JmvgJ7pKKhYxKYzvmMFMrcLxGFp1BCdTq7RoQYB8ArQlTLmVF/qPA1XtLb5UYeS8kL2d9ciuHKnn1D1+X9yfmlj5an+pwTeLebnRVfa4zEElLhzfN6jp6lnjK9CkVPmhAHD87tgaGxBCj1NjCVUJPj7RHgKCaFKx6OqXawDv3lQWAjtQ2eNG1bO13QuDhrZ7PeRbR6VCgYWLB3YEcGELOryoTCOtIXvGb9c3P4QS9SbrSFD2kgBMzqIkEUXJYenZoduFlVJjZD3LlOsmcYRMDA1Bs0KcsBpJ/8ZlGr/7RPO6E6fu74F+VvHaxpP6lb6avVxElmuAvWcRJH+gJt+g4SsmdFzYpuVGCaGKoFUMxF55jY280SbivmpSqlyo/q0P2NcHj92kNVcDBv/meu8OtYLSrQqEp9LBfDfzN4FRsOuXjUtWSyaRg3oAl2DPRRXusJ/tm8vAHPxFt1riEqND1X6Pt7S7sYrs0zvkDY6C07vHfWo68clI5El/CoLEmC8ZEM4D288Ki7QPhEY1k/Fmzhuu7WFd43s=
   template:
     metadata:
       annotations: *ref_0
-      name: aws-creds
+      name: awscreds
     type: Opaque
+
