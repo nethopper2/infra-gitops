@@ -29,9 +29,9 @@ module "eks" {
     vpc-cni = {
       most_recent = true
     }
-    aws-ebs-csi-driver = {
-      most_recent = true
-    }
+  #   aws-ebs-csi-driver = {
+  #     most_recent = true
+  #   }
   }
 
   vpc_id                   = var.vpc_id
@@ -40,30 +40,41 @@ module "eks" {
 
   # EKS Managed Node Group(s)
   eks_managed_node_group_defaults = {
-    instance_types = ["m5.xlarge", "m5.large", "t3.medium", "t3.nano"]
+    instance_types = ["m5.xlarge", "m5.large", "t3.large", "t3.nano"]
     iam_role_additional_policies = {
       AmazonEBSCSIDriverPolicy = "arn:aws:iam::aws:policy/service-role/AmazonEBSCSIDriverPolicy"
     }
   }
 
   eks_managed_node_groups = {
-    blue = {
-      min_size     = 1
-      max_size     = 1
-      desired_size = 1
-      instance_types = ["t3.nano"]
-      capacity_type  = "SPOT"
+  #   blue = {
+  #     min_size     = 1
+  #     max_size     = 1
+  #     desired_size = 1
+  #     instance_types = ["t3.nano"]
+  #     capacity_type  = "SPOT"
 
-	}
+	# }
     green = {
       min_size     = 1
       max_size     = 1
       desired_size = 1
 
-      instance_types = ["t3.nano"]
+      instance_types = ["t3.large"]
       capacity_type  = "SPOT"
     }
   }
+
+  # node_security_group_additional_rules = {
+  #   ingress_allow_access_from_control_plane = {
+  #     type                          = "ingress"
+  #     protocol                      = "tcp"
+  #     from_port                     = 9443
+  #     to_port                       = 9443
+  #     source_cluster_security_group = true
+  #     description                   = "Allow access from control plane to webhook port of AWS load balancer controller"
+  #   }
+  # }
 
   # aws-auth configmap
   manage_aws_auth_configmap = true

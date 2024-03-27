@@ -20,7 +20,7 @@ variable "main-region" {
 
 variable "cluster_name" {
   type    = string
-  default = "tf-cluster"
+  default = "chris-cluster"
 }
 
 variable "rolearn" {
