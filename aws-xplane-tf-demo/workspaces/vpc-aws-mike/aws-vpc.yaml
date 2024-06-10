@@ -5,7 +5,7 @@ metadata:
 spec:
   forProvider:
     source: Remote
-    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/modules/vpc-aws
+    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/modules/vpc-aws-mike
   writeConnectionSecretToRef:
     namespace: nethopper
     name: remote-vpc
