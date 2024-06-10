@@ -7,7 +7,7 @@ spec:
     source: Remote
     module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/modules/vpc-aws
   writeConnectionSecretToRef:
-    namespace: nethopper
+    namespace: devops-admin-tf
     name: remote-vpc
   providerConfigRef:
     name: tfconfig
