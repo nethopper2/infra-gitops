@@ -1,11 +1,10 @@
-apiVersion: tf.crossplane.io/v1alpha1
 kind: Workspace
 metadata:
   name: remote-vpc
 spec:
   forProvider:
     source: Remote
-    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/mike-tf-module
+    module: git::https://github.com/nethopper2/infra-gitops.git//aws-xplane-tf-demo/modules/vpc-aws
   writeConnectionSecretToRef:
     namespace: nethopper
     name: remote-vpc
