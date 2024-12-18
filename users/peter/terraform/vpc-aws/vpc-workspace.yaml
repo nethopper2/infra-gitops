@@ -1,0 +1,13 @@
+apiVersion: tf.crossplane.io/v1alpha1
+kind: Workspace
+metadata:
+  name: cloudflow-vpc
+spec:
+  forProvider:
+    source: Remote
+    module: git::https://github.com/nethopper2/cloudflow.git//iac/tf/aws/vpc-aws
+  writeConnectionSecretToRef:
+    namespace: default
+    name: tf-cloudflow-vpc
+  providerConfigRef:
+    name: awsconfig
