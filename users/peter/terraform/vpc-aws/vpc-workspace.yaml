@@ -10,4 +10,4 @@ spec:
     namespace: default
     name: tf-cloudflow-vpc
   providerConfigRef:
-    name: awsconfig
+    name: awsconf
