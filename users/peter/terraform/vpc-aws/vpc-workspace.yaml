@@ -6,7 +6,8 @@ spec:
   forProvider:
     source: Remote
     # module: git::https://github.com/nethopper2/cloudflow.git//iac/tf/aws/vpc-aws
-    module: git::https://github.com/nethopper2/cloudflow.git//iac/tf/aws/vpc-aws
+    # module: git::https://github.com/nethopper2/kaops.git//demo/iac/aws-vpc
+    module: git::https://github.com/nethopper2/infra-gitops.git//users/terraform/vpc-aws
   writeConnectionSecretToRef:
     namespace: default
     name: tf-cloudflow-vpc
